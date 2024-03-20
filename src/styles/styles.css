@@ -1,1 +1,76 @@
-/*# sourceMappingURL=styles.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  font-size: 16px;
+  font-family: "Overpass", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(216, 12%, 8%);
+}
+body .main {
+  display: block;
+  margin: 1rem;
+  padding: 1.2rem;
+  background-color: #1f2630;
+  border-radius: 1rem;
+}
+body .main__rating {
+  color: hsl(0, 0%, 100%);
+}
+body .main__rating img {
+  width: 1rem;
+  padding: 0.8rem;
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 50%;
+}
+body .main__rating h1 {
+  font-size: 1.5rem;
+}
+body .main__rating p {
+  font-weight: 400;
+  font-size: 14px;
+  color: hsl(217, 12%, 63%);
+  line-height: 1.3rem;
+}
+body .main__rating .rate-container {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+body .main__rating .rate-container .rate-tab-active .rate-spot {
+  background-color: hsl(217, 12%, 63%);
+}
+body .main__rating .rate-container .rate-tab-active .rate-spot span {
+  color: hsl(0, 0%, 100%);
+}
+body .main__rating .rate-container .rate-spot {
+  padding: 1rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 100%;
+  cursor: pointer;
+  transition: ease 0.5s;
+}
+body .main__rating .rate-container .rate-spot .rate-text {
+  color: hsl(217, 12%, 63%);
+  font-size: 0.8rem;
+}
+body .main__rating button {
+  min-width: 100%;
+  margin-top: 2rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 0.1rem;
+  background-color: #fc7613;
+  border-radius: 2rem;
+  border: none;
+}/*# sourceMappingURL=styles.css.map */

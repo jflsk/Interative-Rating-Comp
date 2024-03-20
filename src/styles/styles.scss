@@ -1,0 +1,89 @@
+// Imports
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+// Variables
+
+$white: hsl(0, 0%, 100%);
+$light-grey: hsl(217, 12%, 63%);
+$mid-grey: hsl(216, 12%, 54%);
+$dark-blue: hsl(213, 19%, 18%);
+$grey-blue: #1f2630;
+$very-dark-blue: hsl(216, 12%, 8%);
+$highlight-color: #fc7613;
+
+* {
+    font-size: 16px;
+    font-family: "Overpass", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $very-dark-blue;
+    .main {
+        display: block;
+        margin: 1rem;
+        padding: 1.2rem;
+        background-color: $grey-blue;
+        border-radius: 1rem;
+        &__rating {
+            color: $white;
+            img {
+                width: 1rem;
+                padding: .8rem;
+                background-color: $dark-blue;
+                border-radius: 50%;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            p {
+                font-weight: 400;
+                font-size: 14px;
+                color: $light-grey;
+                line-height: 1.3rem;
+            }
+            .rate-container {
+                max-width: 100%;
+                display: flex;
+                justify-content: space-between;
+                .rate-tab-active .rate-spot {
+                    background-color: $light-grey;
+                    span {
+                        color: $white;
+                    }
+                }
+                .rate-spot {
+                    padding: 1rem;
+                    width: .7rem;
+                    height: .7rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $dark-blue;
+                    border-radius: 100%;
+                    cursor: pointer;
+                    transition: ease .5s;
+                    .rate-text {
+                        color: $light-grey;
+                        font-size: .8rem;
+                    }
+                }
+            }
+            button {
+                min-width: 100%;
+                margin-top: 2rem;
+                padding: 1rem;
+                text-transform: uppercase;
+                color: $white;
+                letter-spacing: .1rem;
+                background-color: $highlight-color;
+                border-radius: 2rem;
+                border: none;
+            }
+        }
+    }
+}
