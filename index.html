@@ -5,45 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="src/styles/styles.css">
   
   <title>Frontend Mentor | Interactive rating component</title>
 
+  <script async src="src/script/script.js"></script>
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
 </head>
 <body>
 
-  <!-- Rating state start -->
+  <div class="main">
+    <div class="main__rating">
+      <img src="src/assets/icon-star.svg" alt="Star Icon" srcset="">
+      <h1>
+        How did we do?
+      </h1>
 
-  How did we do?
+      <p>
+        Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
+      </p>
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
+      <div class="rate-container">  
+        <div class="rate-tab" data-value="1">
+          <div class="rate-spot">
+            <span class="rate-text">
+              1
+            </span>
+          </div>
+        </div>
 
-  1 2 3 4 5
+        <div class="rate-tab" data-value="2">
+          <div class="rate-spot">
+            <span class="rate-text">
+              2
+            </span>
+          </div>
+        </div>
 
-  Submit
+        <div class="rate-tab" data-value="3">
+          <div class="rate-spot">
+            <span class="rate-text">
+              3
+            </span>
+          </div>
+        </div>
+
+        <div class="rate-tab" data-value="4">
+          <div class="rate-spot">
+            <span class="rate-text">
+              4
+            </span>
+          </div>
+        </div>
+
+        <div class="rate-tab" data-value="5">
+          <div class="rate-spot">
+            <span class="rate-text">
+              5
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <button>
+        Submit
+      </button>
+    </div>
 
   <!-- Rating state end -->
 
-  <!-- Thank you state start -->
 
-  You selected <!-- Add rating here --> out of 5
+<!-- 
+  You selected  out of 5
 
   Thank you!
 
   We appreciate you taking the time to give a rating. If you ever need more support, 
   don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+-->
   </div>
 </body>
 </html>
