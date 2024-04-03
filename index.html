@@ -17,7 +17,7 @@
 <body>
 
   <div class="main">
-    <div class="main__rating">
+    <div class="main__rating" id="rating-container">
       <img src="src/assets/icon-star.svg" alt="Star Icon" srcset="">
       <h1>
         How did we do?
@@ -69,22 +69,29 @@
         </div>
       </div>
 
-      <button>
+      <button onclick="showResult()">
         Submit
       </button>
     </div>
 
   <!-- Rating state end -->
+    <div class="main__result">
+      <div class="result-container" id="result-container"> 
+        <img class="result-image" src="src/assets/illustration-thank-you.svg" alt="Thank You Ilustration">
 
+        <span id="rev-result">
+          You selected <span id="rev-result__rate"></span> out of 5
+        </span>
 
-<!-- 
-  You selected  out of 5
+        <h1>
+          Thank you!
+        </h1>
 
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
--->
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+    </div>
   </div>
 </body>
 </html>

@@ -23,13 +23,23 @@ body {
     align-items: center;
     justify-content: center;
     background-color: $very-dark-blue;
+    h1 {
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+    p {
+        font-weight: 400;
+        font-size: 14px;
+        color: $light-grey;
+        line-height: 1.3rem;
+    }
     .main {
-        display: block;
         margin: 1rem;
         padding: 1.2rem;
         background-color: $grey-blue;
         border-radius: 1rem;
         &__rating {
+            display: block;
             color: $white;
             img {
                 width: 1rem;
@@ -37,22 +47,13 @@ body {
                 background-color: $dark-blue;
                 border-radius: 50%;
             }
-            h1 {
-                font-size: 1.5rem;
-            }
-            p {
-                font-weight: 400;
-                font-size: 14px;
-                color: $light-grey;
-                line-height: 1.3rem;
-            }
             .rate-container {
                 max-width: 100%;
                 display: flex;
                 justify-content: space-between;
                 .rate-tab-active .rate-spot {
                     background-color: $light-grey;
-                    span {
+                    .rate-text {
                         color: $white;
                     }
                 }
@@ -67,22 +68,108 @@ body {
                     border-radius: 100%;
                     cursor: pointer;
                     transition: ease .5s;
+                    color: $light-grey;
                     .rate-text {
-                        color: $light-grey;
                         font-size: .8rem;
                     }
                 }
             }
             button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 min-width: 100%;
-                margin-top: 2rem;
-                padding: 1rem;
+                margin: 1.5rem 0 1rem 0;
+                padding: .8rem;
                 text-transform: uppercase;
                 color: $white;
                 letter-spacing: .1rem;
                 background-color: $highlight-color;
                 border-radius: 2rem;
                 border: none;
+            }
+        }
+        .hidden {
+            display: none;
+        }
+        .result-container {
+            display: none;
+        }
+        .result-container-active{
+            color: $white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            .result-image {
+                width: 55%;
+                margin-top: 1rem;
+            }
+            #rev-result {
+                margin: 1.5rem;
+                padding: .5rem 1.2rem;
+                color: $highlight-color;
+                border-radius: 1rem;
+                background-color: $dark-blue;
+                font-size: 14px;
+                #rev-result__rate {
+                    font-size: 14px;
+                }
+            }
+            h1 {
+                margin: 0 0 1rem 0;
+            }
+            p {
+                margin: 0 0 1rem 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 426px) {
+    h1 {
+        margin-top: 1.8rem;
+    }
+
+    .main {
+        padding: 1.2rem 1.6rem 1.2rem 1.6rem !important;
+        display: flex;
+        max-width: 360px;
+        min-height: 380px;
+        border-radius: 2rem !important;
+        .main__rating {
+            margin: 1rem;
+            .rate-container {
+                .rate-spot {
+                    margin: .7rem 0;
+                    padding: 1.2rem;
+                    &:hover {
+                        background-color: $highlight-color;
+                        color: $white;
+                    }
+                    .rate-text {
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+                }
+            }
+            button:hover {
+                transition: ease .5s;
+                background-color: $white;
+                color: $highlight-color;
+            }
+        }
+        .result-container-active {
+            .result-image {
+                max-width: 45%;
+                margin: 1rem 0 !important;
+            }
+            #rev-result {
+                margin-bottom: 2rem !important;
+            }
+            p {
+                font-size: 16px;
             }
         }
     }
